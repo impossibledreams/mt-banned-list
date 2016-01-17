@@ -1,7 +1,7 @@
 About
 -----
-This plugin adds tags to output the internal IP ban list maintained in
-Movable Type. For example:
+This plugin adds tags to output the internal IP ban list maintained in Movable Type.
+Originally created in Feburary of 2005. For example:
 ```
    <MTBannedList>
       <$MTBannedListValue$>
