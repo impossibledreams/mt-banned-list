@@ -2,11 +2,11 @@ About
 -----
 This plugin adds tags to output the internal IP ban list maintained in
 Movable Type. For example:
-
-<MTBannedList>
-    <$MTBannedListValue$>
-</MTBannedList>
-
+```
+   <MTBannedList>
+      <$MTBannedListValue$>
+   </MTBannedList>
+```
 The purpose of this is to allow blog owners to share their blacklists. Attached,
 you will find two template files, one to generate RSS 2.0 feed of the blacklist
 and a second to generate a plain text file. To use, add this file to your
