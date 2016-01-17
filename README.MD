@@ -13,6 +13,7 @@ and a DxL feed. To use, add this plugin and one of the templates to your
 MovableType plugins directory.
 
 DxL format is described in the attached Internet draft:
+
 draft-newton-shafranovich-distributed-blacklists-00.txt
 
 Status
