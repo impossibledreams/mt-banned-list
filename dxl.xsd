@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:dxl="urn:ietf:params:xml:ns:dxl0.1"
+        targetNamespace="urn:ietf:params:xml:ns:dxl0.1"
+        elementFormDefault="qualified" >
+ 
+  <annotation>
+    <documentation>
+      A schema for describing 
+      distributed black/white lists (DxL)
+    </documentation>
+  </annotation>
+  
+  <element name="dxl">
+    <complexType>
+      <sequence>
+        <element name="item" type="dxl:item"
+          minOccurs="1" maxOccurs="unbounded"/>
+        <any namespace="##other" processContents="skip"
+          minOccurs="0" maxOccurs="unbounded" />
+      </sequence>
+      <attribute name="expires" type="dateTime"/>
+      <attribute name="created" type="dateTime"/>
+      <attribute name="lastUpdated" type="dateTime"/>
+      <attribute name="dxlUri" type="anyURI"/>
+      <attribute name="description" type="string"/>
+      <attribute name="descriptionUri" type="anyURI"/>
+    </complexType>
+  </element>
+  
+  <complexType name="item">
+    <sequence>
+    
+      <element name="traceData">
+        <complexType>
+          <sequence>
+            <choice>
+              <element name="ip4" type="anyType">
+                <annotation>
+                  <documentation>as defined by RFC 0791</documentation>
+                </annotation>
+              </element>
+              <element name="ip6" type="anyType">
+                <annotation>
+                  <documentation>as defined by RFC 3513</documentation>
+                </annotation>
+              </element>
+            </choice>
+            <choice minOccurs="0">
+              <element name="submitterDomain" type="anyType">
+                <annotation>
+                  <documentation>as defined by RFC 1035</documentation>
+                </annotation>
+              </element>
+              <element name="submitterUri" type="anyURI"/>
+            </choice>
+            <element name="content" minOccurs="0">
+              <complexType>
+                <choice minOccurs="0" maxOccurs="unbounded">
+                  <element name="domain" type="anyType">
+                    <annotation>
+                      <documentation>as defined by RFC 1035</documentation>
+                    </annotation>
+                  </element>
+                  <element name="uri" type="anyURI"/>  
+                  <element name="regex">
+                    <complexType>
+                      <simpleContent>
+                        <extension base="string">
+                          <attribute name="type" type="NMTOKEN" use="required"/>
+                        </extension>
+                      </simpleContent>
+                    </complexType>
+                  </element>
+                </choice>
+              </complexType>
+            </element>
+            <element name="proxy" type="boolean" minOccurs="0"/>
+            <element name="userAgent" type="token" minOccurs="0"/>
+            <any namespace="##other" processContents="skip"
+              minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+          <attribute name="application" type="dxl:application"/>
+        </complexType>
+      </element>
+      
+      <element name="sourceDxlUri" type="anyURI" minOccurs="0"/>
+      <element name="description" type="string" minOccurs="0"/>
+      <element name="descriptionUri" type="anyURI" minOccurs="0"/>
+      <element name="removalUri" type="anyURI" minOccurs="0"/>
+      <element name="method" type="NMTOKEN" minOccurs="0"/>
+      <element name="hops" type="nonNegativeInteger" minOccurs="0"/>
+      <element name="weight" type="dxl:weight" minOccurs="0"/> 
+      <element name="expires" type="dateTime" minOccurs="0"/>
+      <element name="created" type="dateTime" minOccurs="0"/>
+      <element name="lastUpdated" type="dateTime" minOccurs="0"/>
+      <any namespace="##other" processContents="skip"
+        minOccurs="0" maxOccurs="unbounded" />
+      
+    </sequence>
+  </complexType>
+
+  <simpleType name="weight">
+    <restriction base="decimal">
+      <minInclusive value="-1.0"/>
+      <maxInclusive value="1.0"/>
+      <fractionDigits value="3"/>
+    </restriction>
+  </simpleType>
+  
+  <simpleType name="application">
+    <restriction base="string">
+      <pattern value="\w*(\.\w*)?"/>
+    </restriction>
+  </simpleType>
+  
+</schema>

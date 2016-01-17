@@ -1,7 +1,7 @@
 #!/usr/bin/pl
 #
 # -------------------------------------------------------------------------------
-#   MT Banned List Plugin v0.1
+#   MT Banned List Plugin v0.2
 #   Written by Yakov Shafranovich
 #
 #   A Project of SolidMatrix Research
