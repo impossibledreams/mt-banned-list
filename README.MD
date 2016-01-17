@@ -8,13 +8,22 @@ Movable Type. For example:
    </MTBannedList>
 ```
 The purpose of this is to allow blog owners to share their blacklists. Attached,
-you will find two template files, one to generate RSS 2.0 feed of the blacklist
-and a second to generate a plain text file. To use, add this file to your
-MovableType plugins directory and add either of the two templates.
+you will find several template files, for generating an RSS feed, a text file
+and a DxL feed. To use, add this plugin and one of the templates to your
+MovableType plugins directory.
+
+DxL format is described in the attached Internet draft:
+draft-newton-shafranovich-distributed-blacklists-00.txt
+
+Status
+------
+This plugin is no longer under active development.
 
 Copyright
 ---------
-Copyright (c) 2005 SolidMatrix Technologies, Inc.
+Copyright (c) 2005-2009 SolidMatrix Technologies, Inc.
+Copyright (c) 2009-2015 Shaftek Enterprises.
+Copyright (c) 2016- Impossible Dreams Network.
 
 License
 -------

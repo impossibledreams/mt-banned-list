@@ -1,37 +1,16 @@
 #!/usr/bin/pl
 #
 # -------------------------------------------------------------------------------
-#   MT Banned List Plugin v0.2
-#   Written by Yakov Shafranovich
+#   MT Banned List Plugin. Created by Yakov Shafranovich.
 #
-#   A Project of SolidMatrix Research
-#   Email:  research@solidmatrix.com
-#   
-#   Copyright (C) 2005 SolidMatrix Technologies, Inc.
+#   Copyright (c) 2005-2009 SolidMatrix Technologies, Inc.
+#   Copyright (c) 2009-2015 Shaftek Enterprises.
+#   Copyright (c) 2016- Impossible Dreams Network.
 #
-#   Licensed under the Apache License, Version 2.0 (the "License");
-#   you may not use this file except in compliance with the License.
-#   You may obtain a copy of the License at
+#   Source code can be found at:
+#   https://github.com/impossibledreams/mt-banned-list
 #
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#   Unless required by applicable law or agreed to in writing, software
-#   distributed under the License is distributed on an "AS IS" BASIS,
-#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#   See the License for the specific language governing permissions and
-#   limitations under the License.
-# -------------------------------------------------------------------------------
-# This plugin adds tags to output the internal IP ban list maintained in
-# Movable Type. For example:
-#
-# <MTBannedList>
-#    <$MTBannedListValue$>
-# </MTBannedList>
-#
-# The purpose of this is to allow blog owners to share their blacklists. Attached,
-# you will find two template files, one to generate RSS 2.0 feed of the blacklist
-# and a second to generate a plain text file. To use, add this file to your
-# MovableType plugins directory and add either of the two templates.
+#   Licensed under the Apache License, Version 2.0.
 # -------------------------------------------------------------------------------
 #
 

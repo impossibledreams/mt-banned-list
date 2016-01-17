@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    For information on the DxL format, see the attached Internet draft:
+    draft-newton-shafranovich-distributed-blacklists-00.txt
+-->
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         xmlns:dxl="urn:ietf:params:xml:ns:dxl0.1"
         targetNamespace="urn:ietf:params:xml:ns:dxl0.1"
         elementFormDefault="qualified" >
- 
+
   <annotation>
     <documentation>
-      A schema for describing 
-      distributed black/white lists (DxL)
+      A schema for describing distributed black/white lists (DxL)
     </documentation>
   </annotation>
-  
+
   <element name="dxl">
     <complexType>
       <sequence>
