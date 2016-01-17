@@ -23,7 +23,9 @@ This plugin is no longer under active development.
 Copyright
 ---------
 Copyright (c) 2005-2009 SolidMatrix Technologies, Inc.
+
 Copyright (c) 2009-2015 Shaftek Enterprises.
+
 Copyright (c) 2016- Impossible Dreams Network.
 
 License
